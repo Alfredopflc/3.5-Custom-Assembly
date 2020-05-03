@@ -1,0 +1,14 @@
+; 6 - Convertir pies a pulgadas
+pies = 3
+	data Ra, 0
+	data Rc, 0
+
+.inicio:
+	mov Rb, 12
+	add Rc
+	mov Rd, Rc
+	mov Rb, pies
+	inc Ra
+	cmp Ra
+	jnz .inicio
+	hlt

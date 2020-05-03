@@ -1,0 +1,19 @@
+; 15 - Imprimir la tabla de sumar hasta 12 + 12
+
+.inicio:
+	data Rc, 1
+	data Rd, 12
+	data Rb, 12
+	data Ra, 24
+	
+.next:
+	cmp Rb, Ra
+	jnz .ciclo
+	hlt
+	
+.ciclo:	
+	add Rc
+	mov Rb, Rc
+	mov Rd, Rb
+	data Rc, 1
+	jnz .next

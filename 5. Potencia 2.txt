@@ -1,0 +1,11 @@
+; 5 -  Muestra numeros de potencia del 2 sin pasar de 1000
+	data Rc, 9
+	data Rd, 1
+.inicio:
+	mov Rb, Rd
+	inc Ra
+	add Rd
+	mov Rb, Rc
+	cmp Ra
+	jnz .inicio
+	hlt

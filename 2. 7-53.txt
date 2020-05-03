@@ -1,0 +1,12 @@
+; 2- Imprimir los enteros impares del 7 al 51
+num1 = 7
+num2 = 53
+	data Ra, num1
+	data Rb, num2
+.begin:	
+	mov Rd, Ra
+	inc Ra
+	inc Ra
+	cmp Ra
+	jnz .begin
+	hlt

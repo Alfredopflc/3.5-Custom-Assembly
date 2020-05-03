@@ -1,0 +1,21 @@
+; 9 - Determinar si un numero es par o impar (0 si par, 1 si es impar)
+
+numero = 6
+	data Rd, numero
+	data Rb, 2
+	mov Ra, Rd
+	
+.inicio:
+	sub Ra
+	tst Ra
+	jn .Impar
+	jz .Par
+	jnz .inicio
+	
+.Par:
+	mov Rd, 0
+	hlt
+
+.Impar:
+	mov Rd, 1
+	hlt

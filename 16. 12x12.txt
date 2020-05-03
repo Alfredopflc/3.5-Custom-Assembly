@@ -1,0 +1,19 @@
+; 16 - Imprimir la tabla de multiplicar hasta 12 x 12
+
+.iniciar:
+	data Rc, 12
+	data Rd, 12
+	data Rb, 12
+	data Ra, 144
+	
+.next:
+	cmp Rb, Ra
+	jnz .ciclo
+	hlt
+	
+.ciclo:	
+	add Rc
+	mov Rb, Rc
+	mov Rd, Rb
+	data Rc, 12
+	jnz .next

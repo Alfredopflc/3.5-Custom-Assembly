@@ -1,0 +1,12 @@
+; 3- Imprimir los enteros pares del 2 al 48
+num1 = 2
+num2 = 50
+	data Ra, num1
+	data Rb, num2
+.begin:	
+	mov Rd, Ra
+	inc Ra
+	inc Ra
+	cmp Ra
+	jnz .begin
+	hlt

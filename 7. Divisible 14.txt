@@ -1,0 +1,27 @@
+; 7 - Determinar si un numero dado es divisible entre 14 (0 si no es divisible, 1 si es divisible)
+
+numero = 42
+	data Rd, numero
+	data Rb, 14
+	
+.inicio:
+	cmp Rd
+	jnz .ciclo
+	jz .Divisible
+
+.ciclo:
+	mov Ra, 14
+	add Ra
+	mov Rb, Ra
+	cmp Rd
+	jn .NoDivisible
+	jz .Divisible
+	jnn .ciclo
+	
+.Divisible:
+	mov Rd, 1
+	hlt
+
+.NoDivisible:
+	mov Rd, 0
+	hlt
